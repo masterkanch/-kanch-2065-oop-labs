@@ -4,7 +4,7 @@ Kanch Ruansiripiyakul 633040206-5
 Program that 
 assign grades to students at the end of the year
 """
-def Grading(score):
+def grading(score):
     if score < 50.0:
         return "F"
     elif score >= 50.0 and score < 60.0:
@@ -17,12 +17,12 @@ def Grading(score):
         return "A"
 
 
-def Calculate_Score(mt, fn):
+def calculate_Score(mt, fn):
     score = (0.4 * mt) + (0.6 * fn)
     return score
 
 
-def Get_exam_mark(p):
+def get_exam_mark(p):
     while True:
         try:
             Score = float(input(f"Please enter the student's {p} exam mark (0-100): "))
@@ -33,8 +33,8 @@ def Get_exam_mark(p):
 
 
 id = input("Please enter your student ID: ")
-Midterm_score = Get_exam_mark("midterm")
-Final_score = Get_exam_mark("final")
-Total_score = Calculate_Score(Midterm_score, Final_score)
-Grade = Grading(Total_score)
+Midterm_score = get_exam_mark("midterm")
+Final_score = get_exam_mark("final")
+Total_score = calculate_Score(Midterm_score, Final_score)
+Grade = grading(Total_score)
 print(f"Student ID {id} has the total mark as {Total_score} and has grade as {Grade}")
