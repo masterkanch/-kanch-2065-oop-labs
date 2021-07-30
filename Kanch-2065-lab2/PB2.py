@@ -26,7 +26,10 @@ def get_exam_mark(p):
     while True:
         try:
             Score = float(input(f"Please enter the student's {p} exam mark (0-100): "))
-            return Score
+            if Score >= 0 and Score <= 100:
+                return Score
+            elif Score <= 0:
+                print("Please enter a score in the range [0-100]")
         except ValueError:
             print("Enter a score as a decimal number")
             continue
