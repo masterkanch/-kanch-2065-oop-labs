@@ -15,7 +15,6 @@ if __name__ == "__main__":
     for index, values in enumerate(string):
         chars.append(values)
     print(f"chars are {chars}")
-    print(
-        f"The enterd string is {string} and the result of convert a vowel to uppercase is")
+    print(f"The enterd string is {string} and the result of convert a vowel to uppercase is")
     check_vowel = list(return_vowel(chars))
     print(check_vowel)
