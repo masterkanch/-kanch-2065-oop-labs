@@ -34,4 +34,3 @@ if __name__ == "__main__":
                 print("Please guess with with an integer in the range [1,10]")
         except ValueError:
             print('Please enter an integer to guess')
-        
