@@ -20,5 +20,5 @@ if __name__ == "__main__":
     append_chars_list()
     print(f"chars are {chars}")
     print(f"The enterd string is {string} and the result of convert a vowel to uppercase is")
-    check_vowel = list(return_vowel(chars))
-    print(check_vowel)
+    vowel_in_chars = list(return_vowel(chars))
+    print(vowel_in_chars)
