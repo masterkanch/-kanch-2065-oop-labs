@@ -1,3 +1,13 @@
+VOWELS = ['A','E','I','O','U']
+
+def return_vowel(list):
+    vowel_checked = []
+    for char in list:
+        if char.upper() in VOWELS:
+            vowel_checked.append(char.upper())
+    return vowel_checked
+                
+
 if __name__ == "__main__":
     string = input("Enter a string:")
     chars = []
@@ -5,6 +15,5 @@ if __name__ == "__main__":
         chars.append(values)
     print(f"chars are {chars}")
     print(f"The enterd string is {string} and the result of convert a vowel to uppercase is")
-    check_vowel = [char.upper() for char in chars if char == 'a' or char == 'e' or char == 'i' or char ==
-                   'o' or char == 'u' or char == 'A' or char == 'E' or char == 'I' or char == 'O' or char == 'U']
+    check_vowel = list(return_vowel(chars))
     print(check_vowel)
