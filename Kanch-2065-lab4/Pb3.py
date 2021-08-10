@@ -1,12 +1,12 @@
 def get_infected_cases(p):
     while True:
         try:
-            number = int(
+            new_infected_cases = int(
                 input(f'Enter the number of new infected Covid19 cases for {p}:'))
-            if number >= 0:
+            if new_infected_cases >= 0:
                 print("Stay healthy!")
-                return number
-            elif number < 0:
+                return new_infected_cases
+            elif new_infected_cases < 0:
                 print("You can only enter a non-negative integer")
                 print("Stay healthy!")
         except ValueError:
