@@ -8,30 +8,24 @@ def get_floating_number(p):
             print("Please enter a valid floating point number")
 
 
-def get_operator():
-    operator_list = ['+', '-', '*', '/']
-    while True:
-        try:
-            operator = input("Please enter an operator (+,-,*,/):")
-            if operator not in operator_list:
-                print("Please enter a valid operator")
-                continue
-            elif operator in operator_list:
-                return operator
-        except ValueError:
-            print("Please enter a valid operator")
-
-
-def calculation(num1, num2, operator):
+def calculation(num1, num2):
     try:
-        if operator == '+':
-            return num1 + num2
-        elif operator == '-':
-            return num1 - num2
-        elif operator == '*':
-            return num1 * num2
-        elif operator == '/':
-            return num1 / num2
+        operator_list = ['+', '-', '*', '/']
+        operator = input("Please enter an operator (+,-,*,/):")
+        if operator not in operator_list:
+            print("Unknown operator")
+        elif operator in operator_list:
+            if operator == '+':
+                print(f"{num1} + {num2} = {num1 + num2}")
+            elif operator == '-':
+                print(f"{num1} - {num2} = {num1 - num2}")
+            elif operator == '*':
+                print(f"{num1} * {num2} = {num1 * num2}")
+            elif operator == '/':
+                if num2 != 0:
+                    print(f"{num1} / {num2} = {num1 / num2}")
+                elif num2 == 0:
+                    print("Cannot divide by zero")
     except ZeroDivisionError:
         pass
 
@@ -39,12 +33,7 @@ def calculation(num1, num2, operator):
 def main():
     first_number = get_floating_number("first")
     second_number = get_floating_number("second")
-    operator = get_operator()
-    calculation_num = calculation(first_number, second_number, operator)
-    if operator == '/' and second_number == 0.0:
-        print("Cannot division by zero")
-    else:
-        print(f"{first_number} {operator} {second_number} = {calculation_num}")
+    calculation(first_number, second_number)
 
 
 if __name__ == "__main__":
