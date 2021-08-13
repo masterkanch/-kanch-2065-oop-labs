@@ -1,3 +1,10 @@
+"""
+Kanch Ruansiripiyakul 633040206-5
+
+Calculator Program 
+"""
+
+
 def get_floating_number(p):
     while True:
         try:

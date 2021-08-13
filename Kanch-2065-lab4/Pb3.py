@@ -1,3 +1,10 @@
+"""
+Kanch Ruansiripiyakul 633040206-5
+
+Program that calculate new infected covid cases in percentage
+"""
+
+
 def get_infected_cases(p):
     while True:
         try:

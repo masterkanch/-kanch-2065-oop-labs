@@ -1,3 +1,8 @@
+"""
+Kanch Ruansiripiyakul 633040206-5
+
+Program that calculate average of input number
+"""
 sum = 0
 count = 0
 end_input = False

@@ -1,3 +1,8 @@
+"""
+Kanch Ruansiripiyakul 633040206-5
+
+Program that divide a number
+"""
 import logging
 logging.basicConfig(level=logging.DEBUG)
 n1 = int(input("Enter n1:"))
