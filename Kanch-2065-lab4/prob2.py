@@ -15,7 +15,7 @@ def get_floating_number(p):
             print("Please enter a valid floating point number")
 
 
-def calculation(num1, num2):
+def calculate(num1, num2):
     try:
         operator_list = ['+', '-', '*', '/']
         operator = input("Please enter an operator (+,-,*,/):")
@@ -40,7 +40,7 @@ def calculation(num1, num2):
 def main():
     first_number = get_floating_number("first")
     second_number = get_floating_number("second")
-    calculation(first_number, second_number)
+    calculate(first_number, second_number)
 
 
 if __name__ == "__main__":
