@@ -13,7 +13,8 @@ def get_number():
                 print("Please enter an integer that is non-negative")
                 break
             else:
-                return integer
+                return integer  # print value
+
         except ValueError:
             print("Please enter a valid integer")
             break
@@ -29,12 +30,8 @@ def recursive_factorial(integer):
         pass
 
 
-def main():
+if __name__ == '__main__':
     number = get_number()
     factorial_of_number = recursive_factorial(number)
     if number is not None:
         print(f"The factorial of {number} is {factorial_of_number}")
-
-
-if __name__ == '__main__':
-    main()
