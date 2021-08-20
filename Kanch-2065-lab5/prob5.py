@@ -1,7 +1,7 @@
 ADD = 'add'
 DIV = 'div'
 MUL = 'mul'
-integer = 'int'
+
 
 
 def flexible_calculator(operator, output_format, *number):
