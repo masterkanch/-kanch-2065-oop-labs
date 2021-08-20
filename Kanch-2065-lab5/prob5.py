@@ -1,7 +1,11 @@
+"""
+Kanch Ruansiripiyakul 633040206-5
+
+Calculator program
+"""
 ADD = 'add'
 DIV = 'div'
 MUL = 'mul'
-
 
 
 def flexible_calculator(operator, output_format, *number):
