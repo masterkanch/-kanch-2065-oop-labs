@@ -4,7 +4,6 @@ MUL = 'mul'
 integer = 'int'
 
 
-
 def flexible_calculator(operator, output_format, *number):
     if operator == 'add':
         try:
