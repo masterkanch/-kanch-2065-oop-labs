@@ -27,7 +27,6 @@ def get_operator():
             return 'continue loop'
         elif not operator:
             return '+'
-
     except ValueError:
         print("Operation must be ADD, SUB , MUL or DIV.")
 
