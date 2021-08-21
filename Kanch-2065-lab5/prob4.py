@@ -63,6 +63,7 @@ def robust_calculator(num1, num2, operator, format):
                     print(f"{num1} / {num2} = {num1 // num2:0.02f}")
                 elif num2 == 0:
                     print("Cannot divide by zero")
+                    print("We cannot perform your requested calculation")
         elif format == "int":
             if operator == '+':
                 print(f"{num1} + {num2} = {int(num1 + num2)}")
