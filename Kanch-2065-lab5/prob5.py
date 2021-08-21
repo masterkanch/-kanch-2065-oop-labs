@@ -14,8 +14,7 @@ def flexible_calculator(operator, output_format, *number):
         try:
             sub_num = 0
             if len(number) == 1:
-                for num in number:
-                    return num
+                return "unmodified"
             for num in number:
                 sub_num = sub_num + num
             if output_format == 'float':
