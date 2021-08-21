@@ -55,7 +55,8 @@ def flexible_calculator(operator, output_format, *number):
             elif output_format == 'int':
                 return int(div_num)
         except ZeroDivisionError:
-            return "Cannot divide by zero"
+            print("Cannot divide by zero")
+            exit()
 
 
 if __name__ == '__main__':
