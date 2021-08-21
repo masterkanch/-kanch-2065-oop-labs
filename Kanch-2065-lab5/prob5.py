@@ -6,21 +6,36 @@ Calculator program
 ADD = 'add'
 DIV = 'div'
 MUL = 'mul'
+SUB = 'sub'
 
 
 def flexible_calculator(operator, output_format, *number):
     if operator == 'add':
         try:
-            sum_num = 0
+            sub_num = 0
             if len(number) == 1:
                 for num in number:
                     return num
             for num in number:
-                sum_num = sum_num + num
+                sub_num = sub_num + num
             if output_format == 'float':
-                return float(sum_num)
+                return float(sub_num)
             elif output_format == 'int':
-                return int(sum_num)
+                return int(sub_num)
+        except TypeError:
+            pass
+    elif operator == 'sub':
+        try:
+            sub_num = 0
+            if len(number) == 1:
+                for num in number:
+                    return num
+            for num in number:
+                sub_num = sub_num + num
+            if output_format == 'float':
+                return float(sub_num)
+            elif output_format == 'int':
+                return int(sub_num)
         except TypeError:
             pass
     elif operator == 'mul':
