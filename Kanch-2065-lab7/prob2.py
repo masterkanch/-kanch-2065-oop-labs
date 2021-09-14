@@ -12,13 +12,16 @@ class Numbers:
     def add(self):
         return self.first_number + self.second_number
 
-    def display_factors(number):
+    @classmethod
+    def display_factors(cls, number):
         number = int(number)
+        second_number = cls.second_number = number / 2
         if number % 2 == 0:
-            return f'Factors of {number} is {number/2} and {number/2}'
+            return f'Factors of {number} is {second_number} and {second_number}'
         else:
-            return f'Factors of {number} is {math.floor(number/2)} and {round(number/2)}'
+            return f'Factors of {number} is {math.floor(second_number)} and {round(second_number)}'
 
+    @staticmethod
     def is_valid_divisor(number):
         if number == 0:
             return '0 is not a valid divisor'

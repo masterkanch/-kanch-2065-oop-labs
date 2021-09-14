@@ -18,7 +18,12 @@ class Circle:
 
 
 if __name__ == '__main__':
-    radius = float(input('Enter a radius:'))
-    circle = Circle(radius)
-    print(
-        f"The circle with radius {radius} has the area as {round(circle.calculate_area(),2)} and the perimeter as {round(circle.calculate_perimeter(),2)}")
+    while True:
+        try:
+            radius = float(input('Enter a radius:'))
+            circle = Circle(radius)
+            print(
+                f"The circle with radius {radius} has the area as {round(circle.calculate_area(),2)} and the perimeter as {round(circle.calculate_perimeter(),2)}")
+            break
+        except ValueError:
+            print("Please add a valid value")

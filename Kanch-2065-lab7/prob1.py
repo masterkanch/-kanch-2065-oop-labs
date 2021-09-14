@@ -7,17 +7,17 @@ class Teacher:
     def __init__(self, name, office, research_topic, *courses):
         self.name = name
         self.office = office
-        self.research_topic = research_topic
-        self.courses = courses
+        self.research_work = research_topic
+        self.course_work = courses
 
     def print_office_no(self):
         print(f"{self.name} has the office at {self.office}")
 
     def print_research_work(self):
-        print(f"{self.name} is doing research in these topics {self.research_topic}")
+        print(f"{self.name} is doing research in these topics {self.research_work}")
 
     def print_courses_work(self):
-        print(f"{self.name} teaches these courses {self.courses}")
+        print(f"{self.name} teaches these courses {self.course_work}")
 
 
 if __name__ == "__main__":
