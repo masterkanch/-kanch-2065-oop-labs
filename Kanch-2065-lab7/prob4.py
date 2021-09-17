@@ -14,8 +14,8 @@ class Cat:
         print(f'Cat name is {self.name} and its color is {self.color}')
 
     @classmethod
-    def get_num_legs(cls):
-        return cls.num_legs
+    def get_num_legs(self):
+        return self.num_legs
 
     @staticmethod
     def get_owner_name():
