@@ -1,0 +1,73 @@
+from GuessnumberVer1 import GuessNumberGameVer1
+"""
+Kanch Ruansiripiyakul 633040206-5
+"""
+
+
+class GuessNumberGameVer2(GuessNumberGameVer1):
+    def __init__(self, *args, **kwargs):
+        super(GuessNumberGameVer2, self).__init__(*args, **kwargs)
+        self._guess = []
+        self._numGuesses = 0
+
+    def playGames(self):
+        # using playgame function from GuessNumberGameVer1
+        self.playGame()
+        # When the game end the program will promt the user for what to doing next
+        while True:
+            answer = self.promtGamemsg()
+            if answer == 'q':
+                break
+            elif answer == 'y':
+                self.playGame()
+            elif answer == 'a':
+                self.showGuesses()
+                continue
+            elif answer == 'g':
+                self.showSpecific()
+                continue
+            else:
+                continue
+
+    # ask user for what to doing next
+    def promtGamemsg(self):
+        answer = input(
+            "If you want to play again? type 'y' to continue or 'q' to quit.\nType 'a' to see all your guessses or 'g' to see a guess on specific play:")
+        return answer
+
+    # show the answer that user have ask in the game
+    def showGuesses(self):
+        print(self._guess)
+
+    # show the specific answer that user have ask in the game
+    def showSpecific(self):
+        if len(self._guess) == 1:
+            while True:
+                try:
+                    guess_index = int(
+                        input("Enter which guess in in the range [1]:"))
+                    if guess_index == 1:
+                        print(self._guess[guess_index-1])
+                        break
+                    else:
+                        continue
+                except ValueError:
+                    continue
+        elif len(self._guess) > 1:
+            while True:
+                try:
+                    guess_index = int(input(
+                        f"Enter which guess is in the range [1, {len(self._guess)}]:"))
+                    if guess_index in range(1, len(self._guess)+1):
+                        print(self._guess[guess_index-1])
+                        break
+                    else:
+                        continue
+                except ValueError:
+                    continue
+
+
+if __name__ == '__main__':
+    gng1 = GuessNumberGameVer2(5, 8, 4)
+    print(gng1)
+    gng1.playGames()
