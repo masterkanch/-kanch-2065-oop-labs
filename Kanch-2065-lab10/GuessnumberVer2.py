@@ -1,4 +1,5 @@
 from GuessnumberVer1 import GuessNumberGameVer1
+from random import randint
 """
 Kanch Ruansiripiyakul 633040206-5
 """
@@ -9,6 +10,36 @@ class GuessNumberGameVer2(GuessNumberGameVer1):
         super(GuessNumberGameVer2, self).__init__(*args, **kwargs)
         self._guess = []
         self._numGuesses = 0
+
+    def playGame(self):
+        # random answer
+        answer = randint(self._minnum, self._maxnum)
+        print(
+            f"GuessNumberGame with min number as {self._minnum}, max number as {self._maxnum}, max num of tries as {self._maxTries}")
+        guess = input(
+            f"Please enter a guess ({self._minnum}, {self._maxnum}):")
+        # append guess answer to an array
+        self._guess.append(int(guess))
+
+        numTries = self._maxTries
+        # checking for the number of wrong guess
+        while numTries > 0:
+            numTries = numTries - 1
+            if numTries == 0:
+                print("Wrong please try again later")
+                break
+            if int(guess) == answer:
+                print(f"Congratulations! That's correct")
+                break
+            elif int(guess) < answer:
+                print(
+                    f"Please type a higher number! The number of remaining tries is {numTries}")
+            else:
+                print(
+                    f"Please type a lower number! The number of remaining tries is {numTries}")
+            guess = input(
+                f"Please enter a guess ({self._minnum}, {self._maxnum}):")
+            self._guess.append(int(guess))
 
     def playGames(self):
         # using playgame function from GuessNumberGameVer1

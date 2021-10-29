@@ -31,9 +31,6 @@ class GuessNumberGameVer1:
             f"GuessNumberGame with min number as {self._minnum}, max number as {self._maxnum}, max num of tries as {self._maxTries}")
         guess = input(
             f"Please enter a guess ({self._minnum}, {self._maxnum}):")
-        # append guess answer to an array
-        self._guess.append(int(guess))
-
         numTries = self._maxTries
         # checking for the number of wrong guess
         while numTries > 0:
@@ -52,7 +49,6 @@ class GuessNumberGameVer1:
                     f"Please type a lower number! The number of remaining tries is {numTries}")
             guess = input(
                 f"Please enter a guess ({self._minnum}, {self._maxnum}):")
-            self._guess.append(int(guess))
 
 
 if __name__ == "__main__":
