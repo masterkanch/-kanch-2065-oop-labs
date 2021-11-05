@@ -1,6 +1,9 @@
 import sys
-operator_list = ['+', '-', 'x', '/']
+"""
+Kanch Ruansiripiyakul 633040206-5
+"""
 
+operator_list = ['+', '-', 'x', '/']
 if __name__ == '__main__':
     try:
         num_args = len(sys.argv) - 1

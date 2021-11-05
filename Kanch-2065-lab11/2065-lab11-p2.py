@@ -1,4 +1,7 @@
 import re
+"""
+Kanch Ruansiripiyakul 633040206-5
+"""
 
 
 def split_str(lst):

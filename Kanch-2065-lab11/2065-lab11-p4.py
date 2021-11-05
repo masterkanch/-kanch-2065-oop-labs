@@ -1,4 +1,8 @@
 import csv
+"""
+Kanch Ruansiripiyakul 633040206-5
+"""
+
 if __name__ == '__main__':
     write_numbers_file = open("./Kanch-2065-lab11/numbers.csv", "w")
     write_numbers_file.write("2,4,6\n")

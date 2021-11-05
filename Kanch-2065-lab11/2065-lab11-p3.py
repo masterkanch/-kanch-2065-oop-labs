@@ -1,4 +1,8 @@
 import re
+"""
+Kanch Ruansiripiyakul 633040206-5
+"""
+
 if __name__ == '__main__':
     text = input("Enter text: ")
     pattern = input("Enter pattern: ")
